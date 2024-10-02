@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.AccountActivity"
+    android:fitsSystemWindows="true">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:navigationIcon="@drawable/ic_arrow_back"/>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/firstNameLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="0dp"
+                android:text="First Name"
+                android:textSize="17sp"/>
+
+            <TextView
+                android:id="@+id/firstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:text="first_name"
+                android:textSize="17sp"/>
+
+            <TextView
+                android:id="@+id/secondNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:text="Second Name"
+                android:textSize="17sp"/>
+
+            <TextView
+                android:id="@+id/secondName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:text="last_name"
+                android:textSize="17sp"/>
+
+            <!-- Info Container -->
+            <LinearLayout
+                android:id="@+id/infoContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginTop="16dp"
+                android:alpha="0.8"
+                android:enabled="false"
+                android:focusable="false"
+                android:background="@drawable/border_background">
+
+                <TextView
+                    android:id="@+id/ageLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Age:"
+                    android:textSize="17sp"
+                    android:layout_marginTop="8dp"/>
+
+                <EditText
+                    android:id="@+id/age"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Enter your age"
+                    android:enabled="false"
+                    android:focusable="false"/>
+
+                <TextView
+                    android:id="@+id/heightLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Height:"
+                    android:textSize="17sp"
+                    android:layout_marginTop="8dp"/>
+
+                <EditText
+                    android:id="@+id/height"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Enter your height"
+                    android:enabled="false"
+                    android:focusable="false"/>
+
+                <TextView
+                    android:id="@+id/weightlabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Weight:"
+                    android:textSize="17sp"
+                    android:layout_marginTop="8dp"/>
+
+                <EditText
+                    android:id="@+id/weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Enter your weight"
+                    android:enabled="false"
+                    android:focusable="false"/>
+
+                <TextView
+                    android:id="@+id/Countrylabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Country:"
+                    android:textSize="17sp"
+                    android:layout_marginTop="8dp"/>
+
+                <EditText
+                    android:id="@+id/country"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Enter your country"
+                    android:enabled="false"
+                    android:focusable="false"/>
+
+                <TextView
+                    android:id="@+id/citylabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="City:"
+                    android:textSize="17sp"
+                    android:layout_marginTop="8dp"/>
+
+                <EditText
+                    android:id="@+id/city"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Enter your city"
+                    android:enabled="false"
+                    android:focusable="false"/>
+
+                <TextView
+                    android:id="@+id/streetLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Street:"
+                    android:textSize="17sp"
+                    android:layout_marginTop="8dp"/>
+
+                <EditText
+                    android:id="@+id/street"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Enter your street"
+                    android:enabled="false"
+                    android:focusable="false"/>
+
+                <TextView
+                    android:id="@+id/phoneLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Phone Number:"
+                    android:textSize="17sp"
+                    android:layout_marginTop="8dp"/>
+
+                <EditText
+                    android:id="@+id/phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Enter your phone number"
+                    android:enabled="false"
+                    android:focusable="false"/>
+
+            </LinearLayout>
+
+            <!-- Action Buttons -->
+            <Button
+                android:id="@+id/btnChange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Change"
+                android:layout_gravity="left"/>
+
+            <LinearLayout
+                android:id="@+id/actionButtonsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Save"/>
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cancel"
+                    android:layout_marginStart="16dp"/>
+            </LinearLayout>
+
+            <!-- Password Reset Container -->
+            <LinearLayout
+                android:id="@+id/passwordResetContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginTop="16dp"
+                android:alpha="0.8"
+                android:enabled="false"
+                android:focusable="false"
+                android:background="@drawable/border_background">
+
+                <EditText
+                    android:id="@+id/newPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="New Password"
+                    android:inputType="textPassword"
+                    android:enabled="false"
+                    android:focusable="false"/>
+
+                <EditText
+                    android:id="@+id/confirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="Confirm Password"
+                    android:layout_marginTop="8dp"
+                    android:inputType="textPassword"
+                    android:enabled="false"
+                    android:focusable="false"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnResetPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Reset Password"
+                android:layout_gravity="left"/>
+
+            <LinearLayout
+                android:id="@+id/actionResetContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:gravity="left"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btnConfirmReset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Change"/>
+
+                <Button
+                    android:id="@+id/btnCancelReset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cancel"
+                    android:layout_marginStart="16dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ChartActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:navigationIcon="@drawable/ic_arrow_back"/>
+
+    <RadioGroup
+        android:id="@+id/timeframeGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/toolbar"
+        android:padding="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <RadioButton
+            android:id="@+id/dailyButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Daily"
+            android:textSize="14sp"
+            android:padding="4dp"
+            style="@style/Widget.AppCompat.Button.Borderless"/>
+
+        <RadioButton
+            android:id="@+id/weeklyButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Weekly"
+            android:textSize="14sp"
+            android:padding="4dp"
+            style="@style/Widget.AppCompat.Button.Borderless"/>
+
+        <RadioButton
+            android:id="@+id/monthlyButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Monthly"
+            android:textSize="14sp"
+            android:padding="4dp"
+            style="@style/Widget.AppCompat.Button.Borderless"/>
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/dataTypeGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/timeframeGroup"
+        android:padding="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <RadioButton
+            android:id="@+id/stepsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Steps"
+            android:textSize="14sp"
+            android:padding="4dp"
+            style="@style/Widget.AppCompat.Button.Borderless"/>
+
+        <RadioButton
+            android:id="@+id/heartbeatButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Heartbeat"
+            android:textSize="14sp"
+            android:padding="4dp"
+            style="@style/Widget.AppCompat.Button.Borderless"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dataTypeGroup"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:text="Submit" />
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/submitButton"
+        android:layout_marginStart="202dp"
+        android:layout_toEndOf="@id/submitButton"
+        android:text="Clear" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/line_chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/clearButton"/>
+
+</RelativeLayout>

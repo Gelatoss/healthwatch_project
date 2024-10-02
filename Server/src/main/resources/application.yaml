@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/jwt_security
+    username: "Gelato"
+    password: "ghe0405pop"
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update #update # use create-drop for testing
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+server:
+  address: 0.0.0.0
+  port: 8091
+jwt:
+  secret_key: "1bc4c15272634513e909b868e2f16c8c316a95fa2b650e8d5592cca510a44d8b"
+  expiration: 86400000  # 24h
+
+debug: true
+logging:
+  level:
+    org.springframework.web: DEBUG
+    group.project.myserver: DEBUG
